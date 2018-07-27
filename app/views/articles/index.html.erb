@@ -3,13 +3,15 @@
 <ul id="articles">
   <% @articles.each do |article| %>
     <li>
+    	<button>
       <%= link_to article.title, article_path(article) %>
+  </button>
       <!--div id="task-form" style="display:none;"></div-->
     </li>
   <% end %>
 </ul>
 
-<%= link_to 'Create a new article.', new_article_path, remote: true %>
+<button><%= link_to 'Create a new article.', new_article_path, remote: true %></button>
 
 <div id="task-form" style="display:none;"></div>
 

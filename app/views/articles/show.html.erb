@@ -6,7 +6,7 @@
   <% @article.tags.each do |tag| %>
   <tr>
   <td>
-    <%= link_to tag.name, tag_path(tag), remote: true%>
+    <button><%= link_to tag.name, tag_path(tag), remote: true%></button>
     <%= link_to "x", tagging_path(:article_id => @article, :tag_id => tag), remote: true, method: :delete, class: "tag" %>
   <br>
   </td>
@@ -31,7 +31,7 @@
 
 <p><%= @article.body %></p>
 <% if logged_in? %>
-<%= link_to "<< Back to Articles List", articles_path %>
-<%= link_to "delete", article_path(@article), method: :delete %>
-<%= link_to "edit", edit_article_path(@article)%>
+<button><%= link_to "<< Back to Articles List", articles_path %></button>
+<button><%= link_to "delete", article_path(@article), method: :delete %></button>
+<button><%= link_to "edit", edit_article_path(@article)%></button>
 <% end %>
