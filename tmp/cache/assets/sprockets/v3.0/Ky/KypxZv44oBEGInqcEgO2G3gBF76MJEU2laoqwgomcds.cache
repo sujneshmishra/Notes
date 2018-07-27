@@ -1,0 +1,9 @@
+I"§(function() {
+  $(document).on("page:change", function() {
+    return $('#tags-link').click(function() {
+      return alert("CLicked!");
+    });
+  });
+
+}).call(this);
+:ET

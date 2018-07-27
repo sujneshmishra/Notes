@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @author.username %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @author.email %>
+</p>
+
+<h3>Articles</h3>
+<%= render partial: 'authors/article', collection: @author.articles %>
+
+<%= link_to "Create a New Article", new_article_path, class: "new_article" %>

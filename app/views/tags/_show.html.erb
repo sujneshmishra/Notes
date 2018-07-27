@@ -1,0 +1,11 @@
+<section class = "tag-padding">
+<h3>Articles Tagged with <%= @tag.name %></h3>
+
+<ul>
+  <% @tag.articles.each do |article| %>
+  	<% if article.author_id == current_user.id %>
+    <li><%= link_to article.title, article_path(article) %></li>
+    <% end %>
+  <% end %>
+</ul>
+</section>

@@ -1,0 +1,37 @@
+<h1><%= @article.title %></h1>
+  <%= link_to "Tags", "#"%>
+<section class="show-tag-side">
+
+  <table>
+  <% @article.tags.each do |tag| %>
+  <tr>
+  <td>
+    <%= link_to tag.name, tag_path(tag), remote: true%>
+    <%= link_to "x", tagging_path(:article_id => @article , :tag_id => tag), method: :delete, class: "tag" %>
+  <br>
+  </td>
+  </tr>
+  <% end %>
+</table>
+<div id="task-form" style="display:none;"></div>
+</section>
+
+<%= form_for(@article, remote: true) do |f| %>
+<p>
+	<%= f.label :add_tag %><br/>
+	<%= f.text_field :new_tag_list %>
+</p>
+
+<p>
+<%= f.submit "Add tag"%>
+</p>
+
+<% end %>
+
+
+<p><%= @article.body %></p>
+<% if logged_in? %>
+<%= link_to "<< Back to Articles List", articles_path %>
+<%= link_to "delete", article_path(@article), method: :delete %>
+<%= link_to "edit", edit_article_path(@article)%>
+<% end %>
