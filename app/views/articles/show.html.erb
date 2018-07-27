@@ -7,7 +7,7 @@
   <tr>
   <td>
     <%= link_to tag.name, tag_path(tag), remote: true%>
-    <%= link_to "x", tagging_path(:article_id => @article , :tag_id => tag), method: :delete, class: "tag" %>
+    <%= link_to "x", tagging_path(:article_id => @article, :tag_id => tag), remote: true, method: :delete, class: "tag" %>
   <br>
   </td>
   </tr>
