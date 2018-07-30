@@ -25,7 +25,7 @@ a {
   width: 75%;
   margin: 0 auto;
   background: white;
-  padding: 20px 40px;
+  padding: 20px 40px 500px;
   border: solid 2px black;
   margin-top: 0px;
   margin-down: 40px;
@@ -37,7 +37,7 @@ a {
 }
 
 .tag {
-  background-color: black;
+  background-color: white;
   max-width: 10px;
   max-heigth: 10px;
 }
@@ -54,9 +54,9 @@ a {
 
 .img{
   max-height: 10px;
+  background: white;
 }
 .button{
-  color: red;
   background: white;
   transition-duration: 0.4s;
 }
@@ -64,9 +64,11 @@ a {
   background: black;
 }
 .button:hover a{
+  font-size: 16px;
   color: white;
 }
 .button a{
+  font-size: 12px;
   color: black;
 }
 .header{
