@@ -1,25 +1,16 @@
 <h1>All Articles</h1>
-
-<ul id="articles">
+<ul class="articles">
   <% @articles.each do |article| %>
     <li>
-    	<button>
+    	<button class="button">
       <%= link_to article.title, article_path(article) %>
   </button>
-      <!--div id="task-form" style="display:none;"></div-->
+  <br>
     </li>
   <% end %>
 </ul>
 
-<button><%= link_to 'Create a new article.', new_article_path, remote: true %></button>
+<button class="button"><%= link_to 'Create a new article.', new_article_path, remote: true %></button>
+<br>
 
 <div id="task-form" style="display:none;"></div>
-
-<!--
-<%= link_to "Create a New Article", new_article_path, class: "new_article" %>
-<br>
-<%= link_to 'New Author', new_author_path %>
-<br>
-
-<%= link_to 'Authors list', authors_path %>
--->

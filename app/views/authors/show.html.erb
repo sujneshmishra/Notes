@@ -13,4 +13,6 @@
 <h3>Articles</h3>
 <%= render partial: 'authors/article', collection: @author.articles %>
 
-<%= link_to "Create a New Article", new_article_path, class: "new_article" %>
+<button class="button"><%= link_to "Create a New Article", new_article_path, class: "new_article" %></button>
+<button class="button"><%= link_to " << Back to articles list", articles_path %></button>
+<br>

@@ -2,6 +2,9 @@ class ArticlesController < ApplicationController
 	before_filter :require_login
 	respond_to :html, :js
 	include ArticlesHelper
+	include ActionView::Helpers::AssetUrlHelper
+	include ActionView::Helpers::TagHelper
+
 	
 	def index 
 		@articles = Article.where(author_id: current_user.id)

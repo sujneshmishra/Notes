@@ -24,10 +24,11 @@ a {
 #container {
   width: 75%;
   margin: 0 auto;
-  background: #fff;
+  background: white;
   padding: 20px 40px;
-  border: solid 1px black;
-  margin-top: 20px;
+  border: solid 2px black;
+  margin-top: 0px;
+  margin-down: 40px;
 }
 
 #content {
@@ -37,6 +38,8 @@ a {
 
 .tag {
   background-color: black;
+  max-width: 10px;
+  max-heigth: 10px;
 }
 
 .show-tag-side{
@@ -47,4 +50,30 @@ a {
 
 .tag-padding{
   margin-left: 100px;
+}
+
+.img{
+  max-height: 10px;
+}
+.button{
+  color: red;
+  background: white;
+  transition-duration: 0.4s;
+}
+.button:hover{
+  background: black;
+}
+.button:hover a{
+  color: white;
+}
+.button a{
+  color: black;
+}
+.header{
+  width: 75%;
+  padding: 20px 40px;
+  margin: 0 auto;
+  border: solid 2px black;
+  text-align: right;
+  background: white;
 }
