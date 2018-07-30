@@ -1,5 +1,17 @@
-<h1>All Articles</h1>
-<ul id="articles">
+<!doctype html>
+<html>
+<head>
+<script> 
+$(document).ready(function(){
+    $("#toggle").click(function(){
+        $(".articles").slideToggle("slow");
+    });
+});
+</script>
+</head>
+<body>
+<div id="toggle"><button class="button" style="color:red;">All Articles</button></div>
+<ul class="articles" style="display:none;">
   <% @articles.each do |article| %>
     <li>
     	<button class="button">
@@ -9,8 +21,11 @@
     </li>
   <% end %>
 </ul>
+<br>
 
 <button class="button"><%= link_to 'Create a new article.', new_article_path, remote: true %></button>
 <br>
 
 <div id="task-form" style="display:none;"></div>
+</body>
+</html>

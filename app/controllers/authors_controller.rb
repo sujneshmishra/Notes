@@ -1,7 +1,7 @@
 class AuthorsController < ApplicationController
   #before_action :set_author, only: [:show, :edit, :update, :destroy]
-  #before_filter :zero_authors_or_authenticated, only: [:create]
-  #before_filter :require_login, only: [:show, :destroy, :edit]
+  before_filter :zero_authors_or_authenticated, only: [:create]
+  before_filter :require_login, only: [:show, :destroy, :edit]
   respond_to :html, :js
   #before_filter :require_login, except: [:new, :create]
 
